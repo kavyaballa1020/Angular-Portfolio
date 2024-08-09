@@ -1,0 +1,19 @@
+.contact-section {
+    padding: 50px;
+    background-color: #ffffff;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form label {
+    margin-top: 10px;
+  }
+  form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  form button {
+    padding: 10px;
+  }
+  

@@ -1,0 +1,12 @@
+.skills-section {
+    padding: 50px;
+    background-color: #ffffff;
+  }
+  .skills-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .skills-section li {
+    padding: 10px 0;
+  }
+  

@@ -1,0 +1,11 @@
+.projects-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+  .project-card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+  }
+  
