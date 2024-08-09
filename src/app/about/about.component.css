@@ -1,5 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container { /* Replace with your actual container class name if different */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
 .about-section {
-    padding: 50px;
-    background-color: #e0e0e0;
+  padding: 80px 5%; /* Changed from fixed pixels to percentage */
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100vw; /* Full viewport width */
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.about-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e94560;
+  position: relative;
+  display: inline-block;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #e94560;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.about-content ul li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.about-content ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #e94560;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #e94560;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff6b8b;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.5);
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
+  .about-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-content ul li {
+    padding-left: 0;
+  }
+
+  .about-content ul li::before {
+    display: none;
+  }
+
+  .about-image {
+    margin-top: 50px;
+  }
+}
