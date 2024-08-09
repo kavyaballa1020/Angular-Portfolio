@@ -26,6 +26,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
+  position: relative; /* Added for positioning */
 }
 
 .nav-links a {
@@ -39,8 +40,8 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
 }
 
 /* Hover and focus effect for nav links */
@@ -71,6 +72,12 @@
 .nav-links a.active {
   color: #e94560;
   background-color: rgba(233, 69, 96, 0.2);
+}
+
+/* Specific styling for the "Contact" link */
+.nav-links .contact-link {
+  margin-left: auto; /* Pushes the "Contact" link to the right edge */
+  margin-right: 20px; /* Adds 20px margin from the right edge */
 }
 
 /* Responsive design for mobile screens */
