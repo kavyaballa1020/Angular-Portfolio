@@ -79,6 +79,10 @@
   margin-left: auto; /* Pushes the "Contact" link to the right edge */
   margin-right: 20px; /* Adds 20px margin from the right edge */
 }
+.nav-links i {
+  margin-right: 8px; /* Space between the icon and the text */
+  font-size: 20px; /* Adjust icon size */
+}
 
 /* Responsive design for mobile screens */
 @media (max-width: 768px) {
