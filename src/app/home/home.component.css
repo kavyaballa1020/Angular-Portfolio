@@ -4,32 +4,17 @@
   align-items: center;
   min-height: 100vh;
   padding: 50px;
-  background: linear-gradient(135deg, #1a1a2e, #16213e, #071e3b, #1a1a2e);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  background-color: #000000;
   color: #fff;
   overflow: hidden;
   position: relative;
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 .home-content h1 {
   font-size: 4rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  background: linear-gradient(45deg, #e94560, #ff9a8b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.1);
+  color: #e94560;
 }
 
 .home-content p {
@@ -69,7 +54,7 @@
   width: 400px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   animation: fadeInRight 1s ease-out;
 }
