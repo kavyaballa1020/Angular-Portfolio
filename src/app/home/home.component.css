@@ -1,15 +1,26 @@
+/* Ensure body and html have no margin or padding */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Home section styling */
 .home-section {
+  margin: 0 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
-  padding: 50px;
+  min-height: 100vh; /* Full viewport height */
+  padding: 0 50px; /* Horizontal padding */
   background-color: #000000;
   color: #fff;
   overflow: hidden;
-  position: relative;
+  position:relative;
 }
 
+/* Home content styling */
 .home-content h1 {
   font-size: 4rem;
   margin-bottom: 20px;
@@ -42,6 +53,7 @@
   box-shadow: 0 6px 20px rgba(233, 69, 96, 0.7);
 }
 
+/* Home images styling */
 .home-images {
   flex: 1;
   display: flex;
@@ -89,7 +101,7 @@
   .home-section {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    padding: 0 30px; /* Adjust horizontal padding for smaller screens */
   }
 
   .home-content {
