@@ -30,6 +30,7 @@ body, html {
 }
 
 .about-content h2 {
+  animation: fadeIn 1s ease-out forwards;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #e94560;
@@ -51,12 +52,16 @@ body, html {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .about-content ul {
   list-style-type: none;
   padding: 0;
   margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .about-content ul li {
@@ -100,13 +105,25 @@ body, html {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  opacity: 0; /* Start with the image invisible */
+  animation: fadeIn 1.5s ease-out forwards; /* 1.5 seconds fade-in */
+  animation-delay: 0.5s; /* Delay the start of the animation by 0.5 seconds */
 }
 
 .about-image img:hover {
   transform: scale(1.05);
   box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
 }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 1024px) {
   .about-section {
     flex-direction: column;
@@ -129,4 +146,14 @@ body, html {
   .about-image {
     margin-top: 50px;
   }
+}
+.about-content p:nth-child(2) { animation-delay: 0.2s; }
+.about-content ul { animation-delay: 0.4s; }
+.about-content p:nth-child(4) { animation-delay: 0.6s; }
+.about-content p:nth-child(5) { animation-delay: 0.8s; }
+.cta-button {
+  /* ... existing styles ... */
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
 }
