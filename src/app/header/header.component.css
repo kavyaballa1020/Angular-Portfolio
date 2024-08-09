@@ -1,53 +1,16 @@
-/* Reset margin and padding for body */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll if content overflows */
-}
-
 /* Navbar styling */
 .navbar {
-  background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
-  background-size: 300% 300%;
-  animation: gradientShift 15s ease infinite;
-  padding: 15px 30px; /* Adjust padding as needed */
+  background-color: #000000;
+  padding: 15px 30px;
   display: flex;
-  justify-content: space-between; /* Space between brand and nav items */
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  position: fixed; /* Make navbar fixed to the top */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
-  border-radius: 0; /* Remove rounded corners */
-  overflow: hidden;
-}
-
-/* Keyframes for gradient animation */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Keyframes for shine effect */
-@keyframes shine {
-  0% { transform: translateX(-50%) translateY(-50%) rotate(0deg); }
-  100% { transform: translateX(-50%) translateY(-50%) rotate(360deg); }
-}
-
-/* Shine effect for navbar */
-.navbar::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-  transform: rotate(45deg);
-  animation: shine 12s infinite linear;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Brand name styling */
@@ -61,18 +24,12 @@ body {
 /* Nav links styling */
 .nav-links {
   display: flex;
-  gap: 15px; /* Space between links */
-  align-items: center; /* Align items vertically */
-}
-
-/* Adjust spacing of last item (Contact) */
-.nav-links a:last-child {
-  margin-right: 30px; /* Adjust this value as needed */
-  margin-left: 10px; /* Move it slightly to the left */
+  gap: 15px;
+  align-items: center;
 }
 
 .nav-links a {
-  color: #e94560;
+  color: #ffffff;
   text-decoration: none;
   padding: 12px 24px;
   font-size: 18px;
@@ -107,12 +64,12 @@ body {
 /* Hover and active states for nav links */
 .nav-links a:hover,
 .nav-links a:focus {
-  color: #ffffff;
+  color: #e94560;
   background-color: rgba(233, 69, 96, 0.1);
 }
 
 .nav-links a.active {
-  color: #ffffff;
+  color: #e94560;
   background-color: rgba(233, 69, 96, 0.2);
 }
 
@@ -121,7 +78,6 @@ body {
   .navbar {
     flex-direction: column;
     padding: 15px;
-    border-radius: 0; /* Ensure no rounded corners on mobile */
   }
   
   .nav-links {
