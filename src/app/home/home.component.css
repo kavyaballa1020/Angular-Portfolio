@@ -1,6 +1,77 @@
 .home-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(to right, #84fab0, #8fd3f4);
+  color: #fff;
+  text-align: center;
+}
+
+.home-content {
+  margin-bottom: 30px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.home-content button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.home-content button:hover {
+  background-color: #555;
+}
+
+.home-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.home-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2.5rem;
   }
-  
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .home-content button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .home-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-image {
+    width: 100%;
+    max-width: 400px;
+  }
+}

@@ -1,5 +1,11 @@
 <div class="home-section">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Discover my work and skills.</p>
+  <div class="home-content">
+    <h1>{{ welcomeMessage }}</h1>
+    <p>{{ subMessage }}</p>
+    <button (click)="scrollToSection('about')">Learn More About Me</button>
   </div>
-  
+  <div class="home-images">
+    <img src="assets/home1.jpg" alt="Home Image 1" class="home-image">
+    <img src="assets/home2.jpg" alt="Home Image 2" class="home-image">
+  </div>
+</div>
