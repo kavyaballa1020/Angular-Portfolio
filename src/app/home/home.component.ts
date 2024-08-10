@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,15 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  // Message to display on the home page
   welcomeMessage: string = 'Welcome to My Portfolio';
   subMessage: string = 'Discover my work, skills, and projects.';
 
-  // Method to scroll to a specific section of the page
-  scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  constructor(private router: Router) {}
+
+  navigateToAbout() {
+    this.router.navigate(['/about']);
   }
 }
