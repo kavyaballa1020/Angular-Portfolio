@@ -1,19 +1,69 @@
 .contact-section {
-    padding: 50px;
-    background-color: #ffffff;
-  }
+  padding: 50px;
+  background-color: #000000; /* Match with home and projects sections */
+  color: #ffffff; /* Match text color with home and projects sections */
+  text-align: center;
+  height: 100vh;
+  border-top: 5px solid #e94560; 
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #e94560; /* Accent color for consistency */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Match home section text shadow */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+form label {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background for consistency */
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: #ffffff;
+}
+
+form button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #e94560; /* Accent color for buttons */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff6b8b; /* Lighten on hover */
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
   form {
-    display: flex;
-    flex-direction: column;
-  }
-  form label {
-    margin-top: 10px;
+    padding: 20px;
   }
   form input, form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
+    max-width: 100%;
   }
-  form button {
-    padding: 10px;
-  }
-  
+}
