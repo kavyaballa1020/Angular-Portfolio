@@ -1,3 +1,15 @@
+/* Base fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .resume-section {
   height: 100vh;
   display: flex;
@@ -9,6 +21,8 @@
   background-color: black;
   margin: 0; /* Remove default margin to avoid scrollbars */
   overflow: auto; /* Allow scrollbars if needed */
+  opacity: 0; /* Ensure initial visibility for fade-in */
+  animation: fadeInUp 1.5s ease-out forwards; /* Add fade-in animation */
 }
 
 .resume-section h2 {
@@ -16,6 +30,8 @@
   margin-bottom: 20px; /* Space between heading and image */
   color: #e94560; /* Accent color for consistency */
   text-shadow: 2px 2px 4px rgba(255,255,255,0.2); /* Text shadow to match other sections */
+  opacity: 0; /* Ensure initial visibility for fade-in */
+  animation: fadeInUp 1.5s ease-out 0.2s forwards; /* Animation with delay */
 }
 
 .resume-section .resume-image {
@@ -23,6 +39,8 @@
   max-height: 50vh; /* Limit height to avoid overflow */
   height: auto; /* Maintain aspect ratio */
   margin: 20px 0; /* Space between image and button */
+  opacity: 0; /* Ensure initial visibility for fade-in */
+  animation: fadeInUp 1.5s ease-out 0.4s forwards; /* Animation with delay */
 }
 
 .resume-section a {
@@ -34,6 +52,8 @@
   text-decoration: none;
   border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Ensure initial visibility for fade-in */
+  animation: fadeInUp 1.5s ease-out 0.6s forwards; /* Animation with delay */
 }
 
 .resume-section a:hover {
