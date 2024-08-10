@@ -85,6 +85,7 @@ body, html {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  border: #000000;
   transition: all 0.3s ease;
 }
 
