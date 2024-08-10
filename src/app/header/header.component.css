@@ -15,7 +15,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
-  position: relative; /* Added for positioning */
+  position: relative; 
 }
 .nav-links a {
   color: #ffffff;
@@ -68,13 +68,11 @@
     flex-direction: column;
     padding: 15px;
   }
-  
   .nav-links {
     flex-direction: column;
     width: 100%;
     align-items: center;
   }
-  
   .nav-links a {
     margin: 8px 0;
     width: 100%;
