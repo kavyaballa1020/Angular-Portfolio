@@ -1,48 +1,67 @@
+/* Base fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .contact-section {
   padding: 50px;
-  background-color: #000000; /* Match with home and projects sections */
-  color: #ffffff; /* Match text color with home and projects sections */
+  background-color: #000000; /* Ensure initial background color is black */
+  color: #ffffff;
   height: 100vh;
-  border-top: 5px solid #e94560; 
+  border-top: 5px solid #e94560;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Animation to fade in the entire section smoothly */
+  animation: fadeInUp 1.5s ease-out;
+  animation-fill-mode: forwards; /* Ensure that the element retains the final state of the animation */
 }
 
 .contact-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space out form and SVG */
+  justify-content: space-between;
   width: 100%;
-  max-width: 1400px; /* Adjust the maximum width to fit your layout */
+  max-width: 1400px;
 }
 
+/* Smooth fade-in for the form */
 .contact-form {
   flex: 1;
-  max-width: 800px; /* Increase the maximum width of the form */
-  margin-right: 20px; /* Space between form and SVG */
+  max-width: 800px;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the form items horizontally */
+  align-items: center;
   text-align: center;
   box-shadow: 0 4px 8px 0 #e94560;
-  border-radius: 10px; /* Rounded corners for the border */
-  padding: 20px; /* Padding inside the border */
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background to contrast with form */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Animation with a slight delay for smooth effect */
+  animation: fadeInUp 1.5s ease-out 0.2s;
+  animation-fill-mode: forwards; /* Ensure that the element retains the final state of the animation */
 }
 
 .contact-form h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #e94560; /* Accent color for consistency */
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2); /* Match home section text shadow */
+  color: #e94560;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center form inputs and button */
-  width: 100%; /* Ensure the form takes full width of its container */
+  align-items: center;
+  width: 100%;
 }
 
 form label {
@@ -51,18 +70,23 @@ form label {
   margin-bottom: 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background for consistency */
+  background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   margin-bottom: 15px;
   font-size: 1rem;
+  /* Smooth fade-in effect */
+  animation: fadeInUp 1.5s ease-out 0.4s;
+  animation-fill-mode: forwards; /* Ensure that the element retains the final state of the animation */
 }
 
-form input::placeholder, form textarea::placeholder {
+form input::placeholder,
+form textarea::placeholder {
   color: #ffffff;
 }
 
@@ -71,24 +95,30 @@ form button {
   font-size: 1rem;
   border: none;
   border-radius: 25px;
-  background-color: #e94560; /* Accent color for buttons */
+  background-color: #e94560;
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Smooth fade-in effect */
+  animation: fadeInUp 1.5s ease-out 0.6s;
+  animation-fill-mode: forwards; /* Ensure that the element retains the final state of the animation */
 }
 
 form button:hover {
-  background-color: #ff6b8b; /* Lighten on hover */
+  background-color: #ff6b8b;
   transform: translateY(-3px);
 }
 
 .contact-svg {
-  flex: 0 0 auto; /* Prevent the SVG from stretching */
-  margin-left: 20px; /* Space between SVG and form */
+  flex: 0 0 auto;
+  margin-left: 20px;
+  /* Smooth fade-in effect */
+  animation: fadeInUp 1.5s ease-out 0.8s;
+  animation-fill-mode: forwards; /* Ensure that the element retains the final state of the animation */
 }
 
 .contact-svg img {
-  width: 450px; /* Increase size for better visibility */
+  width: 450px;
   height: auto;
 }
 
@@ -97,20 +127,16 @@ form button:hover {
     flex-direction: column;
     align-items: center;
   }
-
   .contact-svg {
-    margin-left: 0; /* Remove margin on smaller screens */
-    margin-bottom: 20px; /* Space between SVG and form */
+    margin-left: 0;
+    margin-bottom: 20px;
   }
-
   .contact-form {
-    margin-right: 0; /* Remove margin on smaller screens */
+    margin-right: 0;
   }
-
   form {
     padding: 20px;
   }
-
   form input, form textarea {
     max-width: 100%;
   }
