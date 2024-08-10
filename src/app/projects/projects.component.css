@@ -24,12 +24,11 @@
   width: calc(33.333% - 20px); /* Adjust based on the number of cards per row */
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  backdrop-filter: blur(10px);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(221, 86, 86, 0.58);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #333; /* Set a darker text color for readability */
+  color: #ffffff; /* Set a darker text color for readability */
 }
 
 .project-card:hover {
@@ -54,7 +53,7 @@
 
 .project-card p {
   font-size: 1rem;
-  color: #666;
+  color: #d7d2d2;
   margin-bottom: 15px;
 }
 
@@ -74,12 +73,12 @@
 }
 .project-links {
   display: flex;
-  justify-content: space-between; /* Space out buttons evenly */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Adjust the space between the buttons */
   margin-top: 15px;
 }
 
 .project-links a {
-  display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
   color: #ffffff;
