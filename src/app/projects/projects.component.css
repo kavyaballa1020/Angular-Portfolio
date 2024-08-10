@@ -1,13 +1,16 @@
 .projects-section {
   padding: 50px;
-  background-color: #f4f4f4;
+  background-color: #000000; /* Match with home section background */
+  color: #ffffff; /* Match text color with home section */
   text-align: center;
+  border-top: 5px solid #e94560; /* Add a border to match the header accent */
 }
 
 .projects-section h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #333;
+  color: #e94560; /* Accent color for consistency */
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.2); /* Match home section text shadow */
 }
 
 .project-cards-container {
@@ -26,6 +29,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333; /* Set a darker text color for readability */
 }
 
 .project-card:hover {
@@ -39,12 +43,13 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for visual consistency */
 }
 
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #e94560; /* Match with header accent color */
 }
 
 .project-card p {
@@ -65,7 +70,32 @@
 }
 
 .project-link:hover {
-  background-color: #ff6b8b;
+  background-color: #ff6b8b; /* Lighten on hover */
+}
+.project-links {
+  display: flex;
+  justify-content: space-between; /* Space out buttons evenly */
+  margin-top: 15px;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #e94560; /* Accent color for consistency */
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: #ff6b8b; /* Lighten on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.project-links a:active {
+  transform: translateY(0); /* Remove lift effect on click */
 }
 
 @media (max-width: 1024px) {
