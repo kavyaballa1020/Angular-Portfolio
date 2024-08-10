@@ -8,13 +8,13 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Redirect root path to HomeComponent
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '' } // Redirect all unknown routes to HomeComponent
 ];
 
 @NgModule({
