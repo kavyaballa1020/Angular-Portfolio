@@ -2,12 +2,36 @@
   padding: 50px;
   background-color: #000000; /* Match with home and projects sections */
   color: #ffffff; /* Match text color with home and projects sections */
-  text-align: center;
   height: 100vh;
   border-top: 5px solid #e94560; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-section h2 {
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out form and SVG */
+  width: 100%;
+  max-width: 1400px; /* Adjust the maximum width to fit your layout */
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 800px; /* Increase the maximum width of the form */
+  margin-right: 20px; /* Space between form and SVG */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form items horizontally */
+  text-align: center;
+  box-shadow: 0 4px 8px 0 #e94560;
+  border-radius: 10px; /* Rounded corners for the border */
+  padding: 20px; /* Padding inside the border */
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background to contrast with form */
+}
+
+.contact-form h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #e94560; /* Accent color for consistency */
@@ -17,8 +41,8 @@
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-
+  align-items: center; /* Center form inputs and button */
+  width: 100%; /* Ensure the form takes full width of its container */
 }
 
 form label {
@@ -29,7 +53,6 @@ form label {
 
 form input, form textarea {
   width: 100%;
-  max-width: 600px; /* Adjust as needed */
   padding: 15px;
   border: none;
   border-radius: 8px;
@@ -59,10 +82,35 @@ form button:hover {
   transform: translateY(-3px);
 }
 
+.contact-svg {
+  flex: 0 0 auto; /* Prevent the SVG from stretching */
+  margin-left: 20px; /* Space between SVG and form */
+}
+
+.contact-svg img {
+  width: 450px; /* Increase size for better visibility */
+  height: auto;
+}
+
 @media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-svg {
+    margin-left: 0; /* Remove margin on smaller screens */
+    margin-bottom: 20px; /* Space between SVG and form */
+  }
+
+  .contact-form {
+    margin-right: 0; /* Remove margin on smaller screens */
+  }
+
   form {
     padding: 20px;
   }
+
   form input, form textarea {
     max-width: 100%;
   }
