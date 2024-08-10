@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
+import { trigger, transition, style, animate, query } from '@angular/animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  animations: [
+    trigger('fadeInAnimation', [
+      transition('* => *', [
+        query(':enter', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          animate('0.5s', style({ opacity: 1, transform: 'translateY(0)' }))
+        ], { optional: true })
+      ])
+    ])
+  ]
 })
 export class ProjectsComponent {
   projects = [

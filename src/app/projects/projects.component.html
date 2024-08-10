@@ -1,6 +1,6 @@
 <div class="projects-section">
   <h2>My Projects</h2>
-  <div class="project-cards-container">
+  <div class="project-cards-container" [@fadeInAnimation]>
     <div class="project-card" *ngFor="let project of projects">
       <img [src]="project.imageUrl" alt="{{ project.title }}" class="project-image" />
       <h3>{{ project.title }}</h3>
