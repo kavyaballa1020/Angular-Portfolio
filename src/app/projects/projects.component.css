@@ -1,25 +1,23 @@
 .projects-section {
   padding: 50px;
-  background-color: #000000; /* Match with home section background */
-  color: #ffffff; /* Match text color with home section */
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
-  border-top: 5px solid #e94560; /* Add a border to match the header accent */
+  border-top: 5px solid #e94560;
 }
-
 .projects-section h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #e94560; /* Accent color for consistency */
-  text-shadow: 2px 2px 4px rgba(255,255,255,0.2); /* Match home section text shadow */
+  color: #e94560;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.2);
+ 
 }
-
 .project-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -30,65 +28,52 @@
     transform: translateY(0);
   }
 }
-
 .project-card {
-  width: calc(33.333% - 20px); /* Adjust based on the number of cards per row */
+  width: calc(33.333% - 20px);
   margin-bottom: 20px;
   padding: 20px;
   backdrop-filter: blur(10px);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(221, 86, 86, 0.58);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #ffffff; /* Set a darker text color for readability */
-  opacity: 0; /* Start with invisible */
-  animation: fadeInUp 1s forwards; /* Apply animation */
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
 }
-
 .project-card:nth-child(1) {
-  animation-delay: 0.2s; /* Delay for the first card */
+  animation-delay: 0.2s; 
 }
-
 .project-card:nth-child(2) {
-  animation-delay: 0.4s; /* Delay for the second card */
+  animation-delay: 0.4s; 
 }
-
 .project-card:nth-child(3) {
-  animation-delay: 0.6s; /* Delay for the third card */
+  animation-delay: 0.6s; 
 }
-
 .project-card:nth-child(4) {
-  animation-delay: 0.8s; /* Delay for the fourth card */
+  animation-delay: 0.8s; 
 }
-
-/* Add more delays for additional cards as needed */
-
-
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 .project-image {
   width: 100%;
   height: 250px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for visual consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
-
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #e94560; /* Match with header accent color */
+  color: #e94560; 
 }
-
 .project-card p {
   font-size: 1rem;
   color: #d7d2d2;
   margin-bottom: 15px;
 }
-
 .project-link {
   display: inline-block;
   padding: 10px 20px;
@@ -99,44 +84,39 @@
   border-radius: 25px;
   transition: background-color 0.3s ease;
 }
-
 .project-link:hover {
-  background-color: #ff6b8b; /* Lighten on hover */
+  background-color: #ff6b8b; 
 }
 .project-links {
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
-  gap: 10px; /* Adjust the space between the buttons */
+  justify-content: center; 
+  gap: 10px; 
   margin-top: 15px;
 }
-
 .project-links a {
   padding: 10px 20px;
   font-size: 1rem;
   color: #ffffff;
-  background-color: #e94560; /* Accent color for consistency */
+  background-color: #e94560;
   text-decoration: none;
   border-radius: 25px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .project-links a:hover {
-  background-color: #ff6b8b; /* Lighten on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #ff6b8b;
+  transform: translateY(-2px); 
 }
 
 .project-links a:active {
-  transform: translateY(0); /* Remove lift effect on click */
+  transform: translateY(0); 
 }
-
 @media (max-width: 1024px) {
   .project-card {
-    width: calc(50% - 20px); /* Adjust for medium screens */
+    width: calc(50% - 20px); 
   }
 }
-
 @media (max-width: 768px) {
   .project-card {
-    width: 100%; /* Adjust for small screens */
+    width: 100%; 
   }
 }
