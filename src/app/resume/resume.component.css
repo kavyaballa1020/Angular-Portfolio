@@ -1,6 +1,31 @@
 .resume-section {
-    padding: 50px;
-    background-color: #e0e0e0;
-    text-align: center;
-  }
-  
+  padding: 50px;
+  color: #ffffff; /* Text color matching the previous sections */
+  text-align: center;
+  background-color: black;
+  border-top: 5px solid #e94560; /* Border to match the accent color */
+  border-bottom: 5px solid #e94560; /* Optional: border at the bottom for consistency */
+}
+
+.resume-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #e94560; /* Accent color for consistency */
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.2); /* Text shadow to match other sections */
+}
+
+.resume-section a {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #e94560; /* Accent color for the button */
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-section a:hover {
+  background-color: #ff6b8b; /* Lighten on hover */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
