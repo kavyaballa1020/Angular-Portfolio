@@ -1,17 +1,28 @@
 .resume-section {
-  padding: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   color: #ffffff; /* Text color matching the previous sections */
   text-align: center;
   background-color: black;
-  border-top: 5px solid #e94560; /* Border to match the accent color */
-  border-bottom: 5px solid #e94560; /* Optional: border at the bottom for consistency */
+  margin: 0; /* Remove default margin to avoid scrollbars */
+  overflow: auto; /* Allow scrollbars if needed */
 }
 
 .resume-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Space between heading and image */
   color: #e94560; /* Accent color for consistency */
   text-shadow: 2px 2px 4px rgba(255,255,255,0.2); /* Text shadow to match other sections */
+}
+
+.resume-section .resume-image {
+  max-width: 90%; /* Ensure the image does not exceed the container width */
+  max-height: 50vh; /* Limit height to avoid overflow */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px 0; /* Space between image and button */
 }
 
 .resume-section a {
