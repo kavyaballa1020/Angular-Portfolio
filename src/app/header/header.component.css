@@ -1,6 +1,7 @@
+/* General navbar styles */
 .navbar {
   background-color: #000000;
-  padding: 15px 30px;
+  padding: 15px 0; /* Reduced padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,44 +11,14 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  overflow: hidden; /* Ensure no elements overflow */
 }
 
-.brand-name {
-  color: #e94560;
-  font-size: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-  letter-spacing: 2px;
-  flex-direction: column; /* Stack picture and text */
-  text-align: center; /* Center align text */
-}
-
-.brand-name i {
-  font-size: 32px;
-  transition: transform 0.3s ease;
-  margin-bottom: 5px; /* Space between icon and text */
-}
-
-.toggler {
-  display: none; /* Hidden by default */
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1001; /* Ensure it's on top of other elements */
-}
-
+/* Navigation links styles */
 .nav-links {
   display: flex;
   gap: 15px;
   align-items: center;
-  position: relative;
+  position: relative; 
 }
 
 .nav-links a {
@@ -93,38 +64,67 @@
   background-color: rgba(233, 69, 96, 0.2);
 }
 
-.nav-links .contact-link {
-  margin-left: auto; 
-  margin-right: 40px; 
-}
+
 
 .nav-links i {
   margin-right: 8px; 
   font-size: 20px; 
 }
 
+/* Brand name styles */
+.brand-name {
+  color: #e94560;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.brand-name i {
+  margin-right: 12px;
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.brand-name:hover i {
+  transform: rotate(360deg);
+}
+
+/* Toggler button styles */
+.toggler {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's on top of other elements */
+}
+
+/* Responsive design for small screens */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
+    flex-direction: row; /* Ensure brand and toggler are in a row */
+    padding: 10px 0; /* Further reduced padding */
   }
 
   .brand-name {
     font-size: 24px;
-    flex-direction: column; /* Arrange picture and text in column */
-    text-align: left; /* Align text to the left */
-  }
-
-  .brand-name i {
-    font-size: 28px;
+    margin-right: auto; /* Push the brand name to the left */
   }
 
   .toggler {
     display: block; /* Show toggler button on small screens */
-    margin-left: auto; /* Align to the right */
+    margin-left: 2px; /* Further reduced margin to decrease space */
   }
-  
+
   .nav-links {
     display: none; /* Hide navigation links by default */
     flex-direction: column;
@@ -138,5 +138,12 @@
 
   .nav-links.active {
     display: flex; /* Show navigation links when toggled */
+    align-items: center; /* Ensure items are aligned properly */
+    flex-wrap: wrap; /* Allow wrapping of items to fit within the container */
+  }
+
+  .nav-links a {
+    width: auto; /* Ensure links do not stretch full width */
+    text-align: center;
   }
 }
