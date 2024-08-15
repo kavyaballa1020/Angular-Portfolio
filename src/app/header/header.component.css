@@ -1,7 +1,7 @@
-/* General navbar styles */
+/* General Navbar Styling */
 .navbar {
   background-color: #000000;
-  padding: 15px 0; /* Reduced padding */
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,12 +13,53 @@
   z-index: 1000;
 }
 
-/* Navigation links styles */
+/* Brand Name Styling */
+.brand-name {
+  color: #e94560;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.brand-name i {
+  margin-right: 12px;
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.brand-name:hover i {
+  transform: rotate(360deg);
+}
+
+/* Toggler Button Styling */
+.toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Navigation Links Styling */
 .nav-links {
   display: flex;
   gap: 15px;
   align-items: center;
-  position: relative; 
+  position: relative;
+  opacity: 1; /* Make visible on larger screens */
+  max-height: none; /* Allow full height on larger screens */
+  overflow: visible; /* Show content on larger screens */
+  transition: none; /* Disable transition on larger screens */
 }
 
 .nav-links a {
@@ -64,69 +105,30 @@
   background-color: rgba(233, 69, 96, 0.2);
 }
 
-
-
 .nav-links i {
-  margin-right: 8px; 
-  font-size: 20px; 
+  margin-right: 8px;
+  font-size: 20px;
 }
 
-/* Brand name styles */
-.brand-name {
-  color: #e94560;
-  font-size: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-  letter-spacing: 2px;
-  text-decoration: none;
-}
-
-.brand-name i {
-  margin-right: 12px;
-  font-size: 32px;
-  transition: transform 0.3s ease;
-}
-
-.brand-name:hover i {
-  transform: rotate(360deg);
-}
-
-/* Toggler button styles */
-.toggler {
-  display: none; /* Hidden by default */
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1001; /* Ensure it's on top of other elements */
-}
-
-/* Responsive design for small screens */
+/* Media Query for Small Screens */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row; /* Ensure brand and toggler are in a row */
-    padding: 10px 0; /* Further reduced padding */
+    flex-direction: row;
+    padding: 10px 0;
   }
 
   .brand-name {
     font-size: 24px;
-    margin-right: auto; /* Push the brand name to the left */
+    margin-right: auto;
   }
 
   .toggler {
-    display: block; /* Show toggler button on small screens */
-    margin-left: 2px; /* Further reduced margin to decrease space */
+    display: block;
+    margin-left: 2px;
   }
 
   .nav-links {
-    display: none; /* Hide navigation links by default */
+    display: flex;
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -134,16 +136,18 @@
     left: 0;
     background-color: #000000;
     padding: 10px 0;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
   }
 
   .nav-links.active {
-    display: flex; /* Show navigation links when toggled */
-    align-items: center; /* Ensure items are aligned properly */
-    flex-wrap: wrap; /* Allow wrapping of items to fit within the container */
+    opacity: 1;
+    max-height: 500px; /* Adjust based on content height */
   }
 
   .nav-links a {
-    width: auto; /* Ensure links do not stretch full width */
+    width: auto;
     text-align: center;
   }
 }
