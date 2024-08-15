@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isNavOpen = false;
+  isNavOpen: boolean = false;
 
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
+  }
+
+  closeNav() {
+    this.isNavOpen = false;
   }
 }
