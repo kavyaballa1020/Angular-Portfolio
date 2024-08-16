@@ -23,7 +23,6 @@ body, html {
   width: 100vw; /* Full viewport width */
   max-width: 100%; /* Ensure it doesn't overflow */
 }
-
 .about-content {
   flex: 1;
   max-width: 600px;
@@ -37,7 +36,6 @@ body, html {
   position: relative;
   display: inline-block;
 }
-
 .about-content h2::after {
   content: '';
   position: absolute;
