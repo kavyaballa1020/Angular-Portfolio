@@ -21,8 +21,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     ProjectsComponent,
     ResumeComponent,
     ContactComponent,
-    HeaderComponent
-  ],
+    HeaderComponent 
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
