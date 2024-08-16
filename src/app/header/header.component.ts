@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isNavOpen: boolean = false;
-
   toggleNav() {
     this.isNavOpen = !this.isNavOpen;
   }
