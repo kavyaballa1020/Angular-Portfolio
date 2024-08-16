@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   welcomeMessage: string = 'Welcome to My Portfolio';
-  subMessage: string = 'Discover my work, skills, and projects.';
+  subMessage: string = 'Explore my work, skills, and projects.';
 
   constructor(private router: Router) {}
 
