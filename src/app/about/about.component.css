@@ -144,6 +144,7 @@ body, html {
 
   .about-image {
     margin-top: 50px;
+    display: none;
   }
 }
 .about-content p:nth-child(2) { animation-delay: 0.2s; }
