@@ -122,12 +122,49 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 1024px) {
+  .skill-category {
+    flex-basis: calc(50% - 40px);
+  }
+
+  .skills-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .skill-category {
     flex-basis: 100%;
   }
+
   .skills-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 60px 20px;
+  }
+
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skill-category {
+    padding: 20px;
+  }
+
+  .skill-category h3 {
+    font-size: 1.5rem;
+  }
+
+  .skill-category li {
+    padding: 8px 0;
+  }
+
+  .skill-category li i {
+    font-size: 1rem;
   }
 }
 
