@@ -1,14 +1,3 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 100%;
-  overflow-x: hidden; 
-}
-
 .home-section {
   margin: 0 !important;
   display: flex;
@@ -22,11 +11,51 @@ html, body {
   position: relative;
 }
 
+/* Add background shapes */
+.home-section::before,
+.home-section::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  background:#e94560c5;
+  opacity: 0.3;
+}
+
+.home-section::before {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.home-section::after {
+  width: 300px;
+  height: 300px;
+  bottom: -150px;
+  right: -150px;
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Rest of your CSS remains the same */
 .home-content h1 {
   font-size: 4rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(255,255,255,0.1);
   color: #e94560;
+  position: relative;
+  z-index: 2;
 }
 
 .home-content p {
@@ -34,6 +63,8 @@ html, body {
   margin-bottom: 30px;
   line-height: 1.6;
   color: #e0e0e0;
+  position: relative;
+  z-index: 2;
 }
 
 .home-content button {
@@ -46,6 +77,8 @@ html, body {
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(233, 69, 96, 0.5);
+  position: relative;
+  z-index: 2;
 }
 
 .home-content button:hover {
@@ -69,6 +102,8 @@ html, body {
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   animation: fadeInRight 1s ease-out;
+  position: relative;
+  z-index: 2;
 }
 
 .home-image:hover {
@@ -77,29 +112,8 @@ html, body {
 
 .home-content {
   animation: fadeInLeft 1s ease-out;
-}
-
-/* Keyframes for the fade-in effect from the left */
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  position: relative;
+  z-index: 2;
 }
 
 /* Media Queries for Responsiveness */
@@ -164,8 +178,8 @@ html, body {
   }
 
   .home-images {
-    order: -1; /* Ensure the image appears first */
-    margin-bottom: -60px; /* Reduced margin */
+    order: -1;
+    margin-bottom: -60px;
   }
 
   .home-content {
