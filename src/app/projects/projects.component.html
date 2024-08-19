@@ -1,7 +1,7 @@
 <div class="projects-section">
   <h2>My Projects</h2>
   <div class="project-cards-container">
-    <div class="project-card" *ngFor="let project of projects">
+    <div class="project-card" *ngFor="let project of projects; let i = index" [style.animation-delay]="i * 0.2 + 's'">
       <div class="project-image-container">
         <img [src]="project.imageUrl" alt="{{ project.title }}" class="project-image" />
       </div>
