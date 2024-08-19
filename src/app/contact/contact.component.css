@@ -1,8 +1,8 @@
-/* Base fade-in animation */
+/* Enhanced fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -11,8 +11,8 @@
 }
 
 .contact-section {
-  padding: 50px 20px;
-  background-color: #000000; /* Black background */
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
   color: #ffffff;
   min-height: 100vh;
   border-top: 5px solid #e94560;
@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
   animation: fadeInUp 1.5s ease-out;
-  animation-fill-mode: forwards; /* Retain final animation state */
+  animation-fill-mode: forwards;
 }
 
 .contact-container {
@@ -32,7 +32,6 @@
   max-width: 1400px;
 }
 
-/* Smooth fade-in for the form */
 .contact-form {
   flex: 1;
   min-width: 300px;
@@ -42,19 +41,21 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 8px 0 #e94560;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
   animation: fadeInUp 1.5s ease-out 0.2s;
   animation-fill-mode: forwards;
 }
 
 .contact-form h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+  font-size: 3rem;
+  margin-bottom: 40px;
   color: #e94560;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+  letter-spacing: 2px;
 }
 
 form {
@@ -65,62 +66,75 @@ form {
 }
 
 form label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #ffffff;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+  font-weight: 600;
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 15px;
-  border: none;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(233, 69, 96, 0.3);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
   color: #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 1rem;
+  transition: all 0.3s ease;
   animation: fadeInUp 1.5s ease-out 0.4s;
   animation-fill-mode: forwards;
 }
 
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 10px rgba(233, 69, 96, 0.5);
+}
+
 form input::placeholder,
 form textarea::placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 form button {
-  padding: 15px 30px;
-  font-size: 1rem;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
   border: none;
-  border-radius: 25px;
-  background-color: #e94560;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #e94560, #ff6b8b);
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   animation: fadeInUp 1.5s ease-out 0.6s;
   animation-fill-mode: forwards;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
 }
 
 form button:hover {
-  background-color: #ff6b8b;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
 }
 
 .contact-svg {
   flex: 1;
-  margin-left: 20px;
+  margin-left: 40px;
   animation: fadeInUp 1.5s ease-out 0.8s;
   animation-fill-mode: forwards;
 }
 
 .contact-svg img {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   height: auto;
+  filter: drop-shadow(0 10px 20px rgba(233, 69, 96, 0.3));
 }
 
-/* Hide SVG on screens smaller than 768px */
+/* Media queries remain the same */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -128,32 +142,33 @@ form button:hover {
   }
 
   .contact-svg {
-    display: none; /* Hide SVG on small screens */
+    display: none;
   }
 
   .contact-form {
     margin-right: 0;
+    padding: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .contact-form {
-    padding: 10px;
+    padding: 20px;
   }
 
   .contact-form h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
   }
 
   form input,
   form textarea {
-    padding: 10px;
-    font-size: 0.9rem;
+    padding: 12px;
+    font-size: 1rem;
   }
 
   form button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 12px 30px;
+    font-size: 1rem;
   }
 }
